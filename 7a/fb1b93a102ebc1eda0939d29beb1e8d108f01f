@@ -1,0 +1,61 @@
+docs/template-catalog.md
+  s_3bffb53c17a525::t_a6953ad4274c27 10,171-179,222-235,308-353,445
+  s_3bffb53c17a525::t_0aaa2d6b8982d8 21-22,27-28,41-127,135
+  s_3bffb53c17a525::t_923ebe76e6c61f 405-408,423-439,446-447
+crates/gametainer-storage/src/sqlite.rs
+  s_3bffb53c17a525::t_0109f6ad5caea7 225
+  s_3bffb53c17a525::t_eee0d244a4c28e 1-4,56-66,136-157,195-224,226-259,319-330,335-341
+Justfile
+  s_3bffb53c17a525::t_4cfb48d49e18c2 39-41,65
+docs/mvp-implementation-plan.md
+  s_3bffb53c17a525::t_4cfb48d49e18c2 119,133-134,136,232
+  s_3bffb53c17a525::t_0aaa2d6b8982d8 205-206
+templates/games/factorio/settings.spec.yaml
+  s_3bffb53c17a525::t_594767eab7cf4e 5-16
+docs/llm-brief.md
+  s_3bffb53c17a525::t_923ebe76e6c61f 147-150
+  s_3bffb53c17a525::t_a6953ad4274c27 181-182,191
+  s_3bffb53c17a525::t_0aaa2d6b8982d8 169-172
+  s_3bffb53c17a525::t_4cfb48d49e18c2 245-246
+crates/gametainer-templates/src/lib.rs
+  s_3bffb53c17a525::t_c27714f4615b96 20-30,47-59,254,320-329,343-344,346-377,381-427,432,438-443
+  s_3bffb53c17a525::t_3a2ec8070d2e33 95-98,184-187,197-253
+crates/gametainer-storage/src/models.rs
+  s_3bffb53c17a525::t_eee0d244a4c28e 22-44
+docs/cli-conventions.md
+  s_3bffb53c17a525::t_4cfb48d49e18c2 27
+docs/gamer-configuration.md
+  s_3bffb53c17a525::t_923ebe76e6c61f 296,298-306,328-332,343-344
+templates/games/factorio/definition.yaml
+  s_3bffb53c17a525::t_594767eab7cf4e 5-13
+crates/gametainer/src/main.rs
+  s_3bffb53c17a525::t_8a1bb9bfb7e1fb 150
+  s_3bffb53c17a525::t_fa9754e31a73c4 1-2,4,28,62-81,130-135,142-149,151-154,159,172-202,207-220,294,297
+  s_3bffb53c17a525::t_991b709cac9f4f 44,251-263,267
+  s_3bffb53c17a525::t_0109f6ad5caea7 161-164,203-206
+  s_3bffb53c17a525::t_ddfb811b57feb4 160
+  s_3bffb53c17a525::t_8e1c1b97155935 264-266
+crates/gametainer-storage/src/repository.rs
+  s_3bffb53c17a525::t_eee0d244a4c28e 2-4,10,15-16,18-20
+  s_3bffb53c17a525::t_0109f6ad5caea7 17
+docs/product-architecture.md
+  s_3bffb53c17a525::t_a6953ad4274c27 361-362
+  s_3bffb53c17a525::t_0aaa2d6b8982d8 324
+  s_3bffb53c17a525::t_923ebe76e6c61f 279-281,288
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.13",
+  "base_commit_sha": "7afb1b93a102ebc1eda0939d29beb1e8d108f01f",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
