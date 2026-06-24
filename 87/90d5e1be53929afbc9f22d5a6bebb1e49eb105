@@ -1,0 +1,93 @@
+crates/gametainer-storage/src/sqlite.rs
+  s_3bffb53c17a525::t_8b96dd7d7c75c2 193-203,353-362
+crates/gametainer/Cargo.toml
+  s_3bffb53c17a525::t_ed775bba32f229 9,13
+  s_3bffb53c17a525::t_730aceaed7b82c 12
+crates/gametainer-templates/src/lib.rs
+  s_3bffb53c17a525::t_befb77a089e58b 140-141
+crates/gametainer-storage/src/repository.rs
+  s_3bffb53c17a525::t_4f7bfd7f74b3d1 13
+crates/gametainer/src/main.rs
+  s_3bffb53c17a525::t_36d7860b08bf8d 174,178-184
+  s_3bffb53c17a525::t_b45206a7b62f07 142-150,280-287
+  s_3bffb53c17a525::t_bb3424619058eb 341-344
+  s_3bffb53c17a525::t_cc6ba7054d0f88 411
+  s_3bffb53c17a525::t_0dc713d1b053ef 265,276-279,288,296-298,417
+  s_3bffb53c17a525::t_c210022035c6e5 1-2,4,138,152,171-173,175-177,185-188,197-199,202-205,226-230,266-275,289-295,306-340,348-356
+  s_3bffb53c17a525::t_3c2ddd2e912389 3
+docs/mvp-implementation-plan.md
+  s_3bffb53c17a525::t_9e6d3c8f2246dc 62
+  s_3bffb53c17a525::t_e285f848345773 149-154,156-158
+  s_3bffb53c17a525::t_16d54bd7624079 155
+  s_3bffb53c17a525::t_de4a5497385604 184-192,202
+README.md
+  s_3bffb53c17a525::t_7cc09df16e3e79 2-7,9-17,24-27,29
+  s_3bffb53c17a525::t_30d68df337853d 8
+  s_3bffb53c17a525::t_1885c0b27222d3 28
+  s_3bffb53c17a525::t_2fa69763cda135 18-23
+Justfile
+  s_3bffb53c17a525::t_395fe6baab843f 3-4,72,75,78,81,88,91,94,97
+  s_3bffb53c17a525::t_cc490ab6a8d9b8 50-64
+  s_3bffb53c17a525::t_00ba25f77de047 65-67
+images/wine/Dockerfile
+  s_3bffb53c17a525::t_28ca4b4a5e9e0b 9,17,71
+crates/gametainer/src/docker.rs
+  s_3bffb53c17a525::t_f3f2ff12c2b799 182,199,217,244-256,506-540
+  s_3bffb53c17a525::t_31b06df7cb45f9 5,7-10,19,28,40-42,55-59,61-65,101-106,109-113,116-117,119-128,131-141,147,152-153,155-157,161-166,170-178,183-190,200,202-203,209-216,218,222-233,236-242,275-281,284-289
+  s_3bffb53c17a525::t_6898f36ddf4e7b 11,154,201,426-430,465-467
+  s_3bffb53c17a525::t_a2c01d524ed0f9 2-4,6,12-18,20-27,29-39,44-54,60,66-100,107-108,114-115,118,129-130,142-146,148-151,158-160,167-169,179-181,191-198,204-208,219-221,234-235,243,257-264,282-283,290-298,309-314,316-372,543-546,548-550,553-616,618,632-635,646
+  s_3bffb53c17a525::t_3e3d4f7784b97e 299-308
+  s_3bffb53c17a525::t_d43515751301c1 453
+  s_3bffb53c17a525::t_bb3424619058eb 1,315,547,551-552
+  s_3bffb53c17a525::t_fdbbdb98ca222a 373-425,431-452,454-464,468-505,541-542
+  s_3bffb53c17a525::t_71268ecd1dfef2 617
+  s_3bffb53c17a525::t_5a3889587f1ded 43,265-274
+  s_3bffb53c17a525::t_9ba171ae245c92 619-631
+  s_3bffb53c17a525::t_4b51b1423ffedf 636-645
+images/steamcmd/Dockerfile
+  s_3bffb53c17a525::t_6b916e8641a09e 9,17,47
+crates/gametainer-core/src/gamer.rs
+  s_3bffb53c17a525::t_07cbea018ba7a5 26-29,62-63
+docs/product-architecture.md
+  s_3bffb53c17a525::t_3a54747867d38e 127-128
+  s_3bffb53c17a525::t_96857bd4216ed6 47,55,67,232
+  s_3bffb53c17a525::t_c7fb8e606bd5a4 66
+  s_3bffb53c17a525::t_1dccfde0c7d36b 109-110
+images/steamcmd-wine/Dockerfile
+  s_3bffb53c17a525::t_cb63cb524f5f6f 9,17,47
+docs/cli-conventions.md
+  s_3bffb53c17a525::t_c7dd701ace9d32 54
+  s_3bffb53c17a525::t_cb99c2281d0cfa 46-53,55-68
+images/base/Dockerfile
+  s_3bffb53c17a525::t_bdfffbc9f92e0b 25,33,87
+  s_3bffb53c17a525::t_3fc908542ca67f 10
+  s_3bffb53c17a525::t_f6106d7f42e736 47,51
+docs/llm-brief.md
+  s_3bffb53c17a525::t_32b81165260a56 32-33,49,55-56
+  s_3bffb53c17a525::t_cec60f21177fc0 75-76,110
+  s_3bffb53c17a525::t_d1a942e43afe33 108-109
+  s_3bffb53c17a525::t_c9751171a4d5ef 57
+crates/gamer/Cargo.toml
+  s_3bffb53c17a525::t_c84e9fe7a14907 10
+crates/gamer/src/main.rs
+  s_3bffb53c17a525::t_be19840ba7a75f 443-445
+  s_3bffb53c17a525::t_e5a425d3ab838e 2-3,7,64-70,216-442,446-535
+docs/template-catalog.md
+  s_3bffb53c17a525::t_c77202b5dd032d 188
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.13",
+  "base_commit_sha": "8790d5e1be53929afbc9f22d5a6bebb1e49eb105",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
