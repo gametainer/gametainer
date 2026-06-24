@@ -1,0 +1,49 @@
+crates/gametainer-storage/src/lib.rs
+  s_3bffb53c17a525::t_ffe8b5b3b756d0 1-26
+crates/gametainer/Cargo.toml
+  s_3bffb53c17a525::t_37204739e2896c 9
+crates/gametainer/src/main.rs
+  s_3bffb53c17a525::t_37204739e2896c 1-181,198,203,238
+docs/mvp-implementation-plan.md
+  s_3bffb53c17a525::t_1d1b753bd7efd0 53-133
+crates/gametainer-storage/src/sqlite.rs
+  s_3bffb53c17a525::t_ffe8b5b3b756d0 1-224
+crates/gametainer-storage/src/repository.rs
+  s_3bffb53c17a525::t_ffe8b5b3b756d0 1-14
+docs/llm-brief.md
+  s_3bffb53c17a525::t_1d1b753bd7efd0 33-34
+crates/gametainer-storage/Cargo.toml
+  s_3bffb53c17a525::t_ffe8b5b3b756d0 1-11
+.gitignore
+  h_30afaad5482ce1 20-22
+docs/product-architecture.md
+  s_3bffb53c17a525::t_1d1b753bd7efd0 49-50
+crates/gametainer-storage/src/models.rs
+  s_3bffb53c17a525::t_ffe8b5b3b756d0 1-21
+Cargo.toml
+  s_3bffb53c17a525::t_ffe8b5b3b756d0 6-21
+Justfile
+  s_3bffb53c17a525::t_fd24b3a48afd82 15-32
+  s_3bffb53c17a525::t_1d1b753bd7efd0 39-44
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.10",
+  "base_commit_sha": "530d330f9406312019e6ccd434b4bc27418c3660",
+  "prompts": {},
+  "humans": {
+    "h_30afaad5482ce1": {
+      "author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  },
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": null
+    }
+  }
+}
