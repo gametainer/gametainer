@@ -1,0 +1,4 @@
+crates/** filter=crypt diff=crypt
+docs/** filter=crypt diff=crypt
+fixtures/** filter=crypt diff=crypt
+images/** filter=crypt diff=crypt

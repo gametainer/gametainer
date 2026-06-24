@@ -1,0 +1,10 @@
+keys:
+  # Users
+  - &jinx age1322uu60fpjzgjktx7uaqmafy5tq99j7d3qkrvhm0un4dqtlmly7s9cn0ft
+  - &github age1wjr63deq0pu8kz8w82p0rvf5vzk0qqn6hhaf57wu4svldfmtme3stvjshl
+creation_rules:
+  - path_regex: ".*"
+    key_groups:
+      - age:
+          - *jinx
+          - *github

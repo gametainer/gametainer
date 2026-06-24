@@ -1,0 +1,27 @@
+# Rust
+/target/
+
+# OS/editor noise
+.DS_Store
+**/.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local runtime state
+/.gametainer/
+/data/
+/tmp/
+/dist/
+
+# External catalog checkout lives outside this repository. Keep accidental
+# in-repo clones or symlinks out of version control.
+/templates/
+
+# Local environment
+.env
+.env.*
+
+# Miscellaneous
+/archive/
