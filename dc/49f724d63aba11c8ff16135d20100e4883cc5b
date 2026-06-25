@@ -1,0 +1,58 @@
+images/steamcmd-wine/Dockerfile
+  s_3bffb53c17a525::t_e202e7410c4b2b 23,34
+  s_3bffb53c17a525::t_05a887cb289c76 20-21,30-31,35-39,57-62,81
+  s_3bffb53c17a525::t_3d8a2256093c93 47-56
+  s_3bffb53c17a525::t_92703fdfe24c07 32,40-46,63-80
+Justfile
+  s_3bffb53c17a525::t_85c844a3a18850 75,78,81
+images/steamcmd/Dockerfile
+  s_3bffb53c17a525::t_05a887cb289c76 20-21,30-31,35-39,57-62,81
+  s_3bffb53c17a525::t_4d2d6220b36d89 23,34
+  s_3bffb53c17a525::t_3d8a2256093c93 47-56
+  s_3bffb53c17a525::t_92703fdfe24c07 32,40-46,63-80
+images/wine/Dockerfile
+  s_3bffb53c17a525::t_950a3220ca4835 30-31
+docs/product-architecture.md
+  s_3bffb53c17a525::t_05a887cb289c76 131-132
+  s_3bffb53c17a525::t_0f362e82abbfc6 70
+  s_3bffb53c17a525::t_60464945e71c80 71
+  s_3bffb53c17a525::t_cc5e3642788196 336
+  s_3bffb53c17a525::t_950a3220ca4835 135
+  s_3bffb53c17a525::t_92703fdfe24c07 133
+  s_3bffb53c17a525::t_073899f0c3ddfa 134
+docs/mvp-implementation-plan.md
+  s_3bffb53c17a525::t_771dcd615fd1ae 165
+  s_3bffb53c17a525::t_5a62c2be2c99b2 236,255,263
+  s_3bffb53c17a525::t_1382f904471723 253
+  s_3bffb53c17a525::t_63c04e9d6a42a7 163-164
+  s_3bffb53c17a525::t_80ec311d6eaa33 182,186-192,196-203
+  s_3bffb53c17a525::t_79c4b92c4b4dbb 161-162,250
+  s_3bffb53c17a525::t_c59db8c6eba0b9 156,172
+  s_3bffb53c17a525::t_05a887cb289c76 61,64,212
+images/base/Dockerfile
+  s_3bffb53c17a525::t_05a887cb289c76 4,6-7,19,46,60
+docs/llm-brief.md
+  s_3bffb53c17a525::t_5a62c2be2c99b2 200-201
+  s_3bffb53c17a525::t_4fe7713dae40df 36-38
+  s_3bffb53c17a525::t_b053b4d6e5d60d 39-40
+  s_3bffb53c17a525::t_a6e724544289b8 229-230
+  s_3bffb53c17a525::t_05a887cb289c76 118,123
+  s_3bffb53c17a525::t_c59db8c6eba0b9 62-64
+  s_3bffb53c17a525::t_cc5e3642788196 183-184,202
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.2",
+  "base_commit_sha": "dc49f724d63aba11c8ff16135d20100e4883cc5b",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
