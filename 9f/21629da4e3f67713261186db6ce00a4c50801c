@@ -1,0 +1,20 @@
+crates/gametainer-templates/src/lib.rs
+  s_3bffb53c17a525::t_c20af3ae54f9f8 610-612
+  s_3bffb53c17a525::t_0fc41749ceffbb 606-609,1055-1058,1067-1070
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.2",
+  "base_commit_sha": "9f21629da4e3f67713261186db6ce00a4c50801c",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
