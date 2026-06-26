@@ -1,0 +1,33 @@
+crates/gametainer/src/main.rs
+  s_3bffb53c17a525::t_cbffaf504ab12e 674-679
+images/wine-fex/Dockerfile
+  s_3bffb53c17a525::t_f8b00ca326a513 1-193
+docs/llm-brief.md
+  s_3bffb53c17a525::t_78438793fbb298 93-100
+  s_3bffb53c17a525::t_8d46887528aac5 122,129-130,135,141
+Justfile
+  s_3bffb53c17a525::t_d194c9707aad8f 90-92,94,96,120-122,124,126
+images/steamcmd-wine-fex/Dockerfile
+  s_3bffb53c17a525::t_b0b66a5549301b 11,24,42-43,100-105,108
+  s_3bffb53c17a525::t_1773f93a6f8224 3,78,112,133
+  s_3bffb53c17a525::t_d97df24bf734dc 99
+docs/product-architecture.md
+  s_3bffb53c17a525::t_637480c48af382 130-148
+  s_3bffb53c17a525::t_2e9dc867b41180 244-245,252-254,260
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "0edf14654ce0235b3fe49d37d11eef65f48620b7",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
