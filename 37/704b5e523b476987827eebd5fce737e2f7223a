@@ -1,0 +1,23 @@
+images/base/Dockerfile
+  s_3bffb53c17a525::t_fca32b69305481 96
+images/base-fex/Dockerfile
+  s_3bffb53c17a525::t_fca32b69305481 187
+images/wine/Dockerfile
+  s_3bffb53c17a525::t_697806eed19a2a 75-77
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "37704b5e523b476987827eebd5fce737e2f7223a",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
