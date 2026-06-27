@@ -1,0 +1,33 @@
+crates/gametainer/src/docker.rs
+  s_3bffb53c17a525::t_54fe12afb0a4cc 513,652,708-727,796,814-824
+docs/llm-brief.md
+  s_3bffb53c17a525::t_61ca2a7a56e090 202,206
+crates/gametainer-core/src/gamer.rs
+  s_3bffb53c17a525::t_521a49953bcec0 77-78,143-144
+docs/gamer-configuration.md
+  s_3bffb53c17a525::t_61ca2a7a56e090 303-310,328
+  s_3bffb53c17a525::t_d1442dae65e6c3 329
+crates/gamer/src/main.rs
+  s_3bffb53c17a525::t_cf9645ecf7eac5 341-345
+  s_3bffb53c17a525::t_804e32cddacf7a 1759-1772,1774-1826
+  s_3bffb53c17a525::t_d4136941c86170 1745
+  s_3bffb53c17a525::t_505c03c674d6ab 5,258,274-284,294-340,346-509
+  s_3bffb53c17a525::t_5ba58533c6ee5b 1773
+  s_3bffb53c17a525::t_781611c5309bd2 510,1758
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "7686961706e20021ed5b608813e608e7d2a16cd3",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
