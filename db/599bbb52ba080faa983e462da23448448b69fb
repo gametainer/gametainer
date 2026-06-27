@@ -1,0 +1,27 @@
+crates/gamer/src/main.rs
+  s_3bffb53c17a525::t_93b69624948507 2378-2379,2384,2388-2442,2451-2512,2596-2687,2828-2836,2841-2962,3005-3065,3101-3175,3177-3194,3196-3249
+  s_3bffb53c17a525::t_09f0f99debf15a 3250,3518-3582
+  s_3bffb53c17a525::t_c18f4fc6bb1747 2443-2450,2837-2840,3176,3195
+  s_3bffb53c17a525::t_7551ab4a26537d 526,576-594
+  s_3bffb53c17a525::t_9e201f80d1face 595-596,3251
+crates/gamer/tests/offline.rs
+  s_3bffb53c17a525::t_62f5257dad1307 1-27,29-30,32-37,39-49,53-55,60-152,154-159,161-200,202-222,224-302,304-318
+  s_3bffb53c17a525::t_5568466cc19bba 28,31,38,50-52,153,160,201,223
+  s_3bffb53c17a525::t_b2769ea9a3273e 56-59,303
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "db599bbb52ba080faa983e462da23448448b69fb",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
