@@ -1,0 +1,31 @@
+crates/gametainer/src/main.rs
+  s_3bffb53c17a525::t_32723c066e54fc 1938-1941
+  s_3bffb53c17a525::t_c0149a1dc70498 1732-1766,1772-1789,1792-1794,1799-1800
+  s_3bffb53c17a525::t_212c55673f7f42 1790-1791
+  s_3bffb53c17a525::t_a39c6250c46141 265
+  s_3bffb53c17a525::t_d948e04f00dfa4 679-751
+  s_3bffb53c17a525::t_02a26c7a88a01e 431-440,442-448
+  s_3bffb53c17a525::t_b91039d2a8c473 1767-1771,1795-1798
+  s_3bffb53c17a525::t_a46d6d4e19ab2a 1147,1652
+  s_3bffb53c17a525::t_2e051bdf5cf3ac 441
+  s_3bffb53c17a525::t_fcce710825fc46 1650-1651
+  s_3bffb53c17a525::t_958ec1cd76497f 1058,1066,1073-1146,1148-1283
+  s_3bffb53c17a525::t_72a73b3b75d620 1284
+  s_3bffb53c17a525::t_830b3e359d205d 1731
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "645adc30ac23c1dbc944e483d47bb78654932f4e",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
