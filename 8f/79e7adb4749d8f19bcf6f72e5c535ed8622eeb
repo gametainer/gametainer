@@ -1,0 +1,44 @@
+docs/llm-brief.md
+  s_3bffb53c17a525::t_71d47f94a89831 38-40
+docs/product-architecture.md
+  s_3bffb53c17a525::t_71d47f94a89831 73
+crates/gametainer/src/docker.rs
+  s_3bffb53c17a525::t_a8a5233b61e7fc 734,1823
+  s_3bffb53c17a525::t_17af3c2b0473e5 4-5,9
+  s_3bffb53c17a525::t_75da99d9048184 722,727-733,735-770
+  s_3bffb53c17a525::t_71d47f94a89831 1815-1822,1824
+  s_3bffb53c17a525::t_5af48c21d7d14b 319-326,342-392,771
+  s_3bffb53c17a525::t_fe1525aa9509aa 393,772-773
+crates/gametainer-core/src/gamer.rs
+  s_3bffb53c17a525::t_71d47f94a89831 147
+crates/gametainer/src/main.rs
+  s_3bffb53c17a525::t_a8a5233b61e7fc 586-589
+  s_3bffb53c17a525::t_1b8b2856b28af3 601,969-991
+  s_3bffb53c17a525::t_434901f1a41fb6 537-545,583-585,590-600
+  s_3bffb53c17a525::t_c79b1de0e77206 602-603
+templates/games/vrising/definition.yaml
+  s_3bffb53c17a525::t_db3e22e7643bd0 2
+  s_3bffb53c17a525::t_71d47f94a89831 40-44
+docs/cli-conventions.md
+  s_3bffb53c17a525::t_71d47f94a89831 83
+templates/games/vrising/settings.template.yaml
+  s_3bffb53c17a525::t_cb7c0df4a766bd 45-52
+docs/template-catalog.md
+  s_3bffb53c17a525::t_34b69a10bc3b5c 321-333
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "8f79e7adb4749d8f19bcf6f72e5c535ed8622eeb",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
