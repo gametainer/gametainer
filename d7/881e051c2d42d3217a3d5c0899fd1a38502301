@@ -1,0 +1,14 @@
+Justfile
+  h_30afaad5482ce1 130,139
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "d7881e051c2d42d3217a3d5c0899fd1a38502301",
+  "prompts": {},
+  "humans": {
+    "h_30afaad5482ce1": {
+      "author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
