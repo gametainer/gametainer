@@ -1,0 +1,37 @@
+docs/llm-brief.md
+  s_3bffb53c17a525::t_e302036417884f 57,59,72-78,152,315
+crates/gametainer/src/main.rs
+  s_3bffb53c17a525::t_a5e15df046483d 4-6,91-100
+  s_3bffb53c17a525::t_743074eceef656 218,220-230
+  s_3bffb53c17a525::t_8aff88ed49dc8b 151-154,167-170,468-471,1022-1028
+  s_3bffb53c17a525::t_de2b593254f54e 901
+  s_3bffb53c17a525::t_415f9f83a2d27a 101,1029,1265-1307
+  s_3bffb53c17a525::t_e24c0b9edc1adf 23,129-150,155-166,171-175
+  s_3bffb53c17a525::t_ed9c5b0534f23b 898,1051-1057,1170,1174
+  s_3bffb53c17a525::t_f3e05feedd62f8 446-467,472-491
+  s_3bffb53c17a525::t_7f87bcb7d839c7 176-177,492,817-860,879-884,899-900,911,921-954,967-1021,1030
+  s_3bffb53c17a525::t_5711bdd543b749 178
+  s_3bffb53c17a525::t_505af441380617 493
+  s_3bffb53c17a525::t_1f1503131733ca 1031
+docs/product-architecture.md
+  s_3bffb53c17a525::t_74a761346c9bf6 55,57,69-71,264
+crates/gametainer/src/docker.rs
+  s_3bffb53c17a525::t_13ef847c784c5c 40-49,125-145,148,226,231-232
+  s_3bffb53c17a525::t_8aff88ed49dc8b 123-124
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "c9a3136c7006cb77fe0b071e6adb471804f5a43a",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
