@@ -1,0 +1,27 @@
+crates/gamer/src/main.rs
+  s_3bffb53c17a525::t_992986562c9f3f 847-870,880-932,938-959
+  s_3bffb53c17a525::t_c79e0aff37b580 2180-2213
+  s_3bffb53c17a525::t_7c6a78db7ef726 5,698-704,712,724
+  s_3bffb53c17a525::t_e9b758cf5a411e 871-879,933-937
+  s_3bffb53c17a525::t_6a92e9f41421b8 2179
+docs/gamer-configuration.md
+  s_3bffb53c17a525::t_0f41b6d3d7fa3b 233-234
+docs/llm-brief.md
+  s_3bffb53c17a525::t_0f41b6d3d7fa3b 256
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "4e99be278643b3b3300b71ae157dac26371d2674",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
