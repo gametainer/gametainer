@@ -1,0 +1,58 @@
+crates/gametainer/src/main.rs
+  s_3bffb53c17a525::t_aa2aeb13fcb2b6 1395-1433
+  s_3bffb53c17a525::t_c89f0ee5f27fce 4-5,220,228,231
+  s_3bffb53c17a525::t_4378a94390aa4e 611
+  s_3bffb53c17a525::t_89bb0fcef4c817 402,476-477,481
+  s_3bffb53c17a525::t_fa0ce8f10f0029 1218-1220,1237-1239
+  s_3bffb53c17a525::t_64963a21dcfd3e 432,447
+  s_3bffb53c17a525::t_435d1a7bc775fe 651-658
+  s_3bffb53c17a525::t_66f66b2738586f 844-911
+  s_3bffb53c17a525::t_7f19bf206de28e 1348,1354
+  s_3bffb53c17a525::t_0fc2d93124bf13 1245,1559-1570
+  s_3bffb53c17a525::t_6c3c6fc3e5e80b 16-17,469,1182-1217,1221-1236,1240-1244,1246
+  s_3bffb53c17a525::t_6c2a82a128f7ab 250-257,392,394-399,464-468
+  s_3bffb53c17a525::t_15896278d36b26 502
+  s_3bffb53c17a525::t_15d6f20583d30f 470
+  s_3bffb53c17a525::t_093c4f0cad7e6c 1247
+  s_3bffb53c17a525::t_aa9e1d612c21b7 1394
+crates/gametainer/src/docker.rs
+  s_3bffb53c17a525::t_863d21c8391ed1 1473-1476
+  s_3bffb53c17a525::t_9d4e8f6198ee0e 1580-1591,1595,1601-1638
+  s_3bffb53c17a525::t_c36d39e082414f 189-190,196
+  s_3bffb53c17a525::t_77cef9e80bdaff 1399-1400
+  s_3bffb53c17a525::t_18ba9fc5ce8635 590
+  s_3bffb53c17a525::t_35f616711a100b 1639-1650,1654-1690
+  s_3bffb53c17a525::t_fc66eb9d344401 9,1116-1160
+  s_3bffb53c17a525::t_3ba3576f81f241 56-62,65,156
+  s_3bffb53c17a525::t_7b973fc30b55f4 1651-1653
+  s_3bffb53c17a525::t_fa097713ff2484 592-603
+  s_3bffb53c17a525::t_fa0ce8f10f0029 1592-1594,1596-1600
+  s_3bffb53c17a525::t_a51f2b0c33add1 1161
+crates/gametainer-templates/src/lib.rs
+  s_3bffb53c17a525::t_7e6e8ff3cb1503 713-725
+  s_3bffb53c17a525::t_430d3b6f9e9c00 172-175
+templates/games/palworld/definition.yaml
+  s_3bffb53c17a525::t_1023378fefeff2 29
+templates/games/valheim/definition.yaml
+  s_3bffb53c17a525::t_d2631d32a9dc88 30,34-35
+templates/games/factorio/definition.yaml
+  s_3bffb53c17a525::t_786f42c03691a8 30
+templates/games/vrising/definition.yaml
+  s_3bffb53c17a525::t_6ca653f1d8b833 36,40
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "ef742e25c635afcee45209fe6b725e58ecbb7446",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
