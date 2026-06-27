@@ -1,0 +1,28 @@
+docs/mvp-implementation-plan.md
+  s_3bffb53c17a525::t_83237d1317cb59 203
+docs/llm-brief.md
+  s_3bffb53c17a525::t_65d5ab4cfde7eb 93-94
+docs/product-architecture.md
+  s_3bffb53c17a525::t_68617879d64ba4 118
+  s_3bffb53c17a525::t_65d5ab4cfde7eb 134
+crates/gamer/src/main.rs
+  s_3bffb53c17a525::t_65d5ab4cfde7eb 1772
+docs/gamer-configuration.md
+  s_3bffb53c17a525::t_65d5ab4cfde7eb 262
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "1d567952d98ad7340fdd492e64cbc10f917e991f",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
