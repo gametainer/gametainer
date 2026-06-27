@@ -1,0 +1,52 @@
+docs/gamer-configuration.md
+  s_3bffb53c17a525::t_9334af62a85e65 52,67,69,237-238,412-429,432,434,440-459,461-464
+crates/gamer/src/sha256.rs
+  s_3bffb53c17a525::t_dee62c936bc4df 1-5,7-9,18-149
+  s_3bffb53c17a525::t_9d6aa2842d7c66 6,10-17
+crates/gamer/src/validation.rs
+  s_3bffb53c17a525::t_04e6469b38718d 1-30,37-46,50-65,72-93,98-122,127-129,133-134,138-202
+  s_3bffb53c17a525::t_9d6aa2842d7c66 31-36,47-49,66-71,94-97,123-126,130-132,135-137
+crates/gamer/src/main.rs
+  s_3bffb53c17a525::t_161cd67746f1b8 1353-1356,1387-1389,1391-1394
+  s_3bffb53c17a525::t_2baad43d51e072 2908,3086,3163,3193,3227,3362,3397,3426,3518,3791,3857
+  s_3bffb53c17a525::t_ffd0b673d13303 1395,2379-2475,2480-2516
+  s_3bffb53c17a525::t_f05f4d21018876 2603
+  s_3bffb53c17a525::t_f95eb8022b5fd2 2-3,20-22,100,196-198,200-203,205-208,210-216,220-249,254,259-261,266-274,279-288,294-303
+  s_3bffb53c17a525::t_9d6aa2842d7c66 255-258,262-265,275-278,1390,2476-2479
+  s_3bffb53c17a525::t_c0f4ffbc36f357 3006
+  s_3bffb53c17a525::t_a563142047fa64 1308-1309,1311-1313
+  s_3bffb53c17a525::t_b514075400ccfb 1396
+crates/gametainer-core/src/gamer.rs
+  s_3bffb53c17a525::t_9d201eaefbb3e8 18-19,125-154
+  s_3bffb53c17a525::t_ac3ef8e7f4d210 155
+crates/gametainer/src/docker.rs
+  s_3bffb53c17a525::t_a45b0312260d79 661
+crates/gamer/tests/offline.rs
+  s_3bffb53c17a525::t_328e42df9fffea 269-329
+  s_3bffb53c17a525::t_9d6aa2842d7c66 257-260,385-386,646-649,676-679,1000-1005
+  s_3bffb53c17a525::t_bf9ac8bb051a3d 7-8,179-256,261-268,330-341,344-384,387-408,639-645,650-675,680-689
+  s_3bffb53c17a525::t_9cfda614d86c8e 11-13,140,156
+  s_3bffb53c17a525::t_37eda28167dc9d 342-343,949-986,994
+  s_3bffb53c17a525::t_e3a9f42396c006 690,849-893,987-990,992,995-999,1006-1042,1047-1049
+  s_3bffb53c17a525::t_66892b161c5bf0 488
+  s_3bffb53c17a525::t_c87357efa26599 691
+  s_3bffb53c17a525::t_81e666da434348 991
+  s_3bffb53c17a525::t_4e57e159dcd988 993
+  s_3bffb53c17a525::t_ef426d677ab7c5 1050
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "7d86584ba4dad4a8eca33c290acc0a43d1513220",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
