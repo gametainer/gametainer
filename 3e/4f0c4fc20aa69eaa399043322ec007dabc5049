@@ -1,0 +1,57 @@
+templates/games/valheim/definition.yaml
+  s_3bffb53c17a525::t_1a84f14bad9801 1-35,37-55
+  s_3bffb53c17a525::t_f5ebea57e8c5f3 36,56-62
+templates/index.yaml
+  s_3bffb53c17a525::t_1a84f14bad9801 12-15
+docs/gamer-configuration.md
+  s_3bffb53c17a525::t_4ccab7c804b4aa 336
+crates/gametainer-templates/src/lib.rs
+  s_3bffb53c17a525::t_14c05ad544db2d 456-457
+  s_3bffb53c17a525::t_f463b31191c6e4 1055,1104-1109,1116-1130,1144
+  s_3bffb53c17a525::t_ec17611ffbd534 1451,1462-1471
+docs/template-catalog.md
+  s_3bffb53c17a525::t_4ccab7c804b4aa 544-560
+crates/gametainer-core/src/gamer.rs
+  s_3bffb53c17a525::t_14c05ad544db2d 91-92
+templates/games/valheim/settings.template.yaml
+  s_3bffb53c17a525::t_f5ebea57e8c5f3 22-35,41
+  s_3bffb53c17a525::t_00033273d5464f 36-40
+  s_3bffb53c17a525::t_1a84f14bad9801 1-21,42-49
+crates/gametainer/src/docker.rs
+  s_3bffb53c17a525::t_1febeec816b755 1770,1778
+  s_3bffb53c17a525::t_1416179f0d9a53 1758-1762,1766-1769,1788-1794,1797-1803
+  s_3bffb53c17a525::t_d8f6ab9350afac 1804-1824
+  s_3bffb53c17a525::t_2280ab1a7132a1 1738-1757,1763-1765,1771-1777,1779-1787,1795-1796,1825-1890,1917
+  s_3bffb53c17a525::t_14c05ad544db2d 802,866,869,896-902
+  s_3bffb53c17a525::t_916c9a1d64d2e8 1891-1916
+  s_3bffb53c17a525::t_3fb65001e49390 826-831
+  s_3bffb53c17a525::t_a75603f6323239 903,1918
+docs/llm-brief.md
+  s_3bffb53c17a525::t_4ccab7c804b4aa 204
+templates/games/valheim/settings.spec.yaml
+  s_3bffb53c17a525::t_00033273d5464f 101-155
+  s_3bffb53c17a525::t_1a84f14bad9801 1-13,15-100,156-160
+  s_3bffb53c17a525::t_f5ebea57e8c5f3 14
+crates/gamer/src/main.rs
+  s_3bffb53c17a525::t_14c05ad544db2d 782-789
+  s_3bffb53c17a525::t_3fb65001e49390 3039-3042,3055
+  s_3bffb53c17a525::t_e73cac792afec5 3057-3065,3123-3130
+  s_3bffb53c17a525::t_f261d8678670fd 3053,3073,3081,3089,3097,3157,3166,3175,3185,3261
+  s_3bffb53c17a525::t_f8f7d9f6ba0b28 3054,3056
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "3e4f0c4fc20aa69eaa399043322ec007dabc5049",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
