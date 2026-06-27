@@ -1,0 +1,30 @@
+templates/games/vrising/definition.yaml
+  s_3bffb53c17a525::t_6bb3ce1713b97f 43-44
+templates/games/vrising/settings.template.yaml
+  s_3bffb53c17a525::t_6bb3ce1713b97f 50-51
+crates/gametainer/src/docker.rs
+  s_3bffb53c17a525::t_6bb3ce1713b97f 2020-2024
+crates/gamer/src/main.rs
+  s_3bffb53c17a525::t_0ac71bc120cacb 744,751-752,3295,3326
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "5ab8e445ff2aaa3420e744c037003711528932bf",
+  "prompts": {},
+  "humans": {
+    "h_30afaad5482ce1": {
+      "author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  },
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
