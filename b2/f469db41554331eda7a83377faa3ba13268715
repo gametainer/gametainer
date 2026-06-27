@@ -1,0 +1,23 @@
+crates/gametainer/src/docker.rs
+  s_3bffb53c17a525::t_1124ac3412cd75 351-366,369,435-436
+crates/gametainer/src/main.rs
+  s_3bffb53c17a525::t_9f63653319a325 258-261
+  s_3bffb53c17a525::t_3e31ed758fc412 1195-1198
+  s_3bffb53c17a525::t_c40c6fba5d6213 646-652
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "b2f469db41554331eda7a83377faa3ba13268715",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
