@@ -1,0 +1,74 @@
+docs/cli-conventions.md
+  s_3bffb53c17a525::t_6f04d8db007327 91-93,97
+fixtures/templates/games/palworld/definition.yaml
+  s_3bffb53c17a525::t_98b35f1bcfc84c 1-46
+docs/mvp-implementation-plan.md
+  s_3bffb53c17a525::t_64b286b910a36d 237-238,240-243,264-268,272
+  s_3bffb53c17a525::t_578683e9c4da6e 95-102
+fixtures/templates/games/vrising/definition.yaml
+  s_3bffb53c17a525::t_98b35f1bcfc84c 1-90
+README.md
+  s_3bffb53c17a525::t_8f90837c829cb2 8,19-22
+  s_3bffb53c17a525::t_db730c7531534b 23
+fixtures/templates/index.yaml
+  s_3bffb53c17a525::t_98b35f1bcfc84c 1-19
+fixtures/templates/games/vrising/settings.spec.yaml
+  s_3bffb53c17a525::t_98b35f1bcfc84c 1-515
+fixtures/templates/games/factorio/settings.template.yaml
+  s_3bffb53c17a525::t_98b35f1bcfc84c 1-30
+fixtures/templates/games/factorio/definition.yaml
+  s_3bffb53c17a525::t_98b35f1bcfc84c 1-55
+docs/product-architecture.md
+  s_3bffb53c17a525::t_c4565809f5d2c7 399
+fixtures/templates/games/palworld/settings.spec.yaml
+  s_3bffb53c17a525::t_98b35f1bcfc84c 1-723
+Justfile
+  s_3bffb53c17a525::t_e3acc2507d3072 5,43-45,49-51,77,107
+crates/gametainer/src/main.rs
+  s_3bffb53c17a525::t_305551949fe88a 78-114
+  s_3bffb53c17a525::t_ba7f08bae33f1b 1836-1840
+  s_3bffb53c17a525::t_07fb9a276deb6c 25-29,33-37,70,73-74,118-119,129-130,134,142,144,341,351,374,376,522,549,597,608,791,833,835
+  s_3bffb53c17a525::t_4d47d623e7a36b 1908,1949
+fixtures/templates/games/valheim/settings.template.yaml
+  s_3bffb53c17a525::t_98b35f1bcfc84c 1-49
+docs/template-catalog.md
+  s_3bffb53c17a525::t_ebc7e28d407067 21-24,28,30-36,41,50-51,55,83,141-143,145,152
+  s_3bffb53c17a525::t_578d1c082119dd 61,122
+.gitignore
+  s_3bffb53c17a525::t_a8cb1651aab925 17-20
+docs/llm-brief.md
+  s_3bffb53c17a525::t_e16583723ef100 243-245,247,254-258,291
+crates/gametainer/src/docker.rs
+  s_3bffb53c17a525::t_4d47d623e7a36b 1530,1586,1650,1699,1740,1807,1946,2099,2129,2196,2296,2380
+fixtures/templates/games/valheim/definition.yaml
+  s_3bffb53c17a525::t_98b35f1bcfc84c 1-65
+fixtures/templates/games/valheim/settings.spec.yaml
+  s_3bffb53c17a525::t_98b35f1bcfc84c 1-160
+fixtures/templates/README.md
+  s_3bffb53c17a525::t_fddaf7473574d6 1-11
+fixtures/templates/games/vrising/settings.template.yaml
+  s_3bffb53c17a525::t_98b35f1bcfc84c 1-106
+fixtures/templates/games/palworld/settings.template.yaml
+  s_3bffb53c17a525::t_98b35f1bcfc84c 1-155
+crates/gametainer-templates/src/lib.rs
+  s_3bffb53c17a525::t_4d47d623e7a36b 1464
+  s_3bffb53c17a525::t_3da1bc3c8cdaf6 1460,1467
+fixtures/templates/games/factorio/settings.spec.yaml
+  s_3bffb53c17a525::t_98b35f1bcfc84c 1-102
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "53c51495a973239877e495e76cb0d291ce836466",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
