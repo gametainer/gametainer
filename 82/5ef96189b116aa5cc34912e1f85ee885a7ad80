@@ -1,0 +1,254 @@
+crates/gametainer-storage/src/models.rs
+  s_3bffb53c17a525::t_4d59589734f404 2,8-16
+  s_3bffb53c17a525::t_fb52b286441d2a 7,18
+  s_3bffb53c17a525::t_4d9d0f503b8e2f 1,3-6,17
+crates/gamer/src/validation.rs
+  s_3bffb53c17a525::t_04e6469b38718d 1-17
+  s_3bffb53c17a525::t_49df0a7b5d295f 18
+images/steamcmd/Dockerfile
+  s_3bffb53c17a525::t_7f252a8c155ee6 1-5
+  s_3bffb53c17a525::t_f76481be31f01f 6-18
+fixtures/templates/games/palworld/definition.yaml
+  s_3bffb53c17a525::t_98b35f1bcfc84c 1-15
+  s_3bffb53c17a525::t_01a4dac6d6df84 16-18
+images/wine/Dockerfile
+  s_3bffb53c17a525::t_51193c5a901c7c 5
+  s_3bffb53c17a525::t_6b37d5f55a9eac 1
+  s_3bffb53c17a525::t_74f5b9493c2954 3
+  s_3bffb53c17a525::t_715ca03949e030 2
+  s_3bffb53c17a525::t_afa703f3195622 4
+  s_3bffb53c17a525::t_39c490824faa0d 6-8
+fixtures/templates/games/vrising/settings.spec.yaml
+  s_3bffb53c17a525::t_e6f95ebab750ce 1
+  s_3bffb53c17a525::t_ee218071c120b3 2
+  s_3bffb53c17a525::t_9d75742951f551 3
+  s_3bffb53c17a525::t_d04e5452ddedbd 4-18
+fixtures/templates/README.md
+  s_3bffb53c17a525::t_fddaf7473574d6 1-11
+  s_3bffb53c17a525::t_f63e4c771f0437 12-14
+fixtures/templates/games/valheim/definition.yaml
+  s_3bffb53c17a525::t_98b35f1bcfc84c 1-16
+  s_3bffb53c17a525::t_a04957e7d840fd 17-18
+fixtures/templates/games/factorio/definition.yaml
+  s_3bffb53c17a525::t_98b35f1bcfc84c 1-15
+  s_3bffb53c17a525::t_06982023b6c02d 16-18
+crates/gametainer-storage/src/sqlite.rs
+  s_3bffb53c17a525::t_eee0d244a4c28e 1
+  s_3bffb53c17a525::t_183ccc0beac6c8 2-18
+Cargo.toml
+  s_3bffb53c17a525::t_e28c8166a52d6b 1-2
+  s_3bffb53c17a525::t_ffe8b5b3b756d0 6-21
+  s_3bffb53c17a525::t_1f85b2eff7a63b 3-5
+  s_3bffb53c17a525::t_1357c5df1acda3 22-24
+  s_3bffb53c17a525::t_de7f2570c4653f 25
+crates/gamer/src/sha256.rs
+  s_3bffb53c17a525::t_7b3a24ecb17c92 2,9
+  s_3bffb53c17a525::t_6aa6cc2fa9176b 5-6
+  s_3bffb53c17a525::t_80e9557137beed 1,3-4,7-8,10-18
+Justfile
+  s_3bffb53c17a525::t_846a8ba08c0474 103
+  s_3bffb53c17a525::t_ded11de94955ba 142
+  s_3bffb53c17a525::t_395fe6baab843f 3,6,88,118-127
+  s_3bffb53c17a525::t_4cfb48d49e18c2 54-56
+  s_3bffb53c17a525::t_231b4885a6859f 4,102,132
+  s_3bffb53c17a525::t_27950c66813328 7-18
+  s_3bffb53c17a525::t_f84ea649900ef3 36
+  s_3bffb53c17a525::t_c064823a2fd746 99-100,104,112-113,129-131,133-134
+  s_3bffb53c17a525::t_ae52337bc8509f 108,110,140
+  s_3bffb53c17a525::t_915c61ce9e7b6c 84
+  s_3bffb53c17a525::t_9119412321a501 98
+  h_30afaad5482ce1 145,154
+  s_3bffb53c17a525::t_852ccbdaa8e14d 114
+  s_3bffb53c17a525::t_a52b8f1c1fe476 89-90
+  s_3bffb53c17a525::t_d194c9707aad8f 105-107,109,111,135-137,139,141
+  s_3bffb53c17a525::t_00ba25f77de047 81-83
+  s_3bffb53c17a525::t_c856bd2b60e51f 45-50
+  s_3bffb53c17a525::t_5e79fae1d4f24e 37-44
+  s_3bffb53c17a525::t_2d762d0e65fcb4 138
+  s_3bffb53c17a525::t_fec1561a6b152e 101
+  s_3bffb53c17a525::t_16af670bc084d0 65
+  s_3bffb53c17a525::t_889b3516d3e9fe 86-87
+  s_3bffb53c17a525::t_57b13f2388f234 144,147-153,155-156
+  s_3bffb53c17a525::t_e3acc2507d3072 5,51-53,57-59,85,115
+  s_3bffb53c17a525::t_1d1b753bd7efd0 60-64
+  s_3bffb53c17a525::t_cf0323239ceb65 143
+  s_3bffb53c17a525::t_85c844a3a18850 91-97
+  s_3bffb53c17a525::t_141980d681f1dd 146
+  s_3bffb53c17a525::t_fd24b3a48afd82 19-35
+  s_3bffb53c17a525::t_6d91d5e71b13ac 116-117
+  s_3bffb53c17a525::t_237fd61975f173 128
+  s_3bffb53c17a525::t_cc490ab6a8d9b8 66-80
+  s_3bffb53c17a525::t_d0c73d7b6ce79c 1-2
+crates/gametainer-storage/src/lib.rs
+  s_3bffb53c17a525::t_ffe8b5b3b756d0 2-18
+  s_3bffb53c17a525::t_85334142579d08 1
+.gitignore
+  s_3bffb53c17a525::t_e3bdf66e41aee5 7-9
+  s_3bffb53c17a525::t_a501dd3ab84ce8 1-3
+  s_3bffb53c17a525::t_9150d493e2a72f 13-15
+  s_3bffb53c17a525::t_a8cb1651aab925 18-21
+  s_3bffb53c17a525::t_68e5b39cfffee6 4-6
+  s_3bffb53c17a525::t_1413e3290ed156 10-12
+  s_3bffb53c17a525::t_a1225f8a29e941 16
+  s_3bffb53c17a525::t_78cfdae3179b4f 17
+  h_30afaad5482ce1 25-27
+scripts/git-sops.sh
+  s_3bffb53c17a525::t_b2312354f66dcb 250-252,255-257
+  s_3bffb53c17a525::t_814105076e03ca 390-392,444-446
+  s_3bffb53c17a525::t_9bda44e7ccbd91 301-306
+  s_3bffb53c17a525::t_d8017fb76dd311 10-133,152,177,187,202,204-205,220,222-223,237-238,243,247,249,258-260,269-270,281,290,299-300,307,313,339,346,348-349,354,383-384,388-389,447,452,457
+  s_3bffb53c17a525::t_d5d729c838b354 188-190,199-201
+  s_3bffb53c17a525::t_4063fdf7d99a9a 244-246
+  s_3bffb53c17a525::t_ecb80ada787ee7 350-353
+  s_3bffb53c17a525::t_f50b435b11017e 239-242
+  s_3bffb53c17a525::t_e5b825a5472c9c 261-263,266-268
+  s_3bffb53c17a525::t_b9c7bf8e058b39 308-312
+  s_3bffb53c17a525::t_86c9a3dd772e54 453-456
+  s_3bffb53c17a525::t_a538c83c58c523 340-345
+  s_3bffb53c17a525::t_bab34e3032a31a 224-226,234-236
+  s_3bffb53c17a525::t_7a309d6b5f5815 1-6,137-148,165,168,172-173,181-183,191-198,209-216,227-233,253-254,264-265,274-277,285-286,294-295,317-335,358-379,393-443,461-490
+  s_3bffb53c17a525::t_883069c74a9e38 282-284,287-289
+  s_3bffb53c17a525::t_1589161e76657b 206-208,217-219
+  s_3bffb53c17a525::t_26db32dd510c56 134-136,149-151
+  s_3bffb53c17a525::t_3f6eb850997901 153-154,174-176
+  s_3bffb53c17a525::t_94906e049b0103 291-293,296-298
+  s_3bffb53c17a525::t_edb8ff7a05cc97 7-9
+  s_3bffb53c17a525::t_884265ea1020d6 355-357,380-382
+  s_3bffb53c17a525::t_f26b46a0f73710 157,166-167
+  s_3bffb53c17a525::t_e2039bf7ae3de4 178-180,184-186
+  s_3bffb53c17a525::t_4fabc34a98de6f 385-387
+  s_3bffb53c17a525::t_0188fb720c3778 155-156,158-159,161-164,169-171
+  s_3bffb53c17a525::t_8c1bf045777644 160
+  s_3bffb53c17a525::t_2dcb733515e0f6 458-460
+  s_3bffb53c17a525::t_5bac387041754c 203
+  s_3bffb53c17a525::t_9ae911adb536f9 221
+  s_3bffb53c17a525::t_fef73be9eabb05 314-316,336-338
+  s_3bffb53c17a525::t_0b11ae9b0676fe 248
+  s_3bffb53c17a525::t_7d545237c0e762 448-451
+  s_3bffb53c17a525::t_75b30090cf5bd1 271-273,278-280
+  s_3bffb53c17a525::t_1e938086c3517a 347
+images/wine-fex/Dockerfile
+  s_3bffb53c17a525::t_f8b00ca326a513 1-14
+  s_3bffb53c17a525::t_595db12653add3 15-17
+fixtures/templates/games/vrising/definition.yaml
+  s_3bffb53c17a525::t_c88acfc72a0a83 4-5
+  s_3bffb53c17a525::t_f52fc7f3ec1286 2
+  s_3bffb53c17a525::t_2b38530507968f 3
+  s_3bffb53c17a525::t_98b35f1bcfc84c 1
+  s_3bffb53c17a525::t_039f265151ac49 6-9
+  s_3bffb53c17a525::t_c15e43c64f0ea4 10-18
+.sops.yaml
+  h_30afaad5482ce1 1-10
+crates/gametainer/Cargo.toml
+  s_3bffb53c17a525::t_730aceaed7b82c 12
+  s_3bffb53c17a525::t_a4ab78dbcfdd7d 6-8
+  s_3bffb53c17a525::t_9f99b3d1cae10b 11
+  s_3bffb53c17a525::t_b69b696a56d4c2 2-4
+  s_3bffb53c17a525::t_ed775bba32f229 5,9,13
+  s_3bffb53c17a525::t_ec17871bff834e 1
+  s_3bffb53c17a525::t_37204739e2896c 10
+  s_3bffb53c17a525::t_348d91ef1f2adb 14-16
+images/base/Dockerfile
+  s_3bffb53c17a525::t_89f0425b04e3c7 1-10
+  s_3bffb53c17a525::t_3b6c63cc804c65 11-13
+images/steamcmd-wine/Dockerfile
+  s_3bffb53c17a525::t_0ed8c2982009c1 1
+  s_3bffb53c17a525::t_73321f0b4a521e 5
+  s_3bffb53c17a525::t_bac5fa85328a7d 3
+  s_3bffb53c17a525::t_19d23ded86cb85 2
+  s_3bffb53c17a525::t_9d163e0a00038e 4
+  s_3bffb53c17a525::t_42c26a0d1c576a 6-8
+scripts/package-release.sh
+  s_3bffb53c17a525::t_44ec0042701b13 1-45
+crates/gametainer-storage/src/repository.rs
+  s_3bffb53c17a525::t_ab875e04fb900a 2,11-14
+  s_3bffb53c17a525::t_86e5924516050b 17-18
+  s_3bffb53c17a525::t_b8357bb3f24592 9-10
+  s_3bffb53c17a525::t_f56fbb6847346b 1,3-8,15-16
+images/base-fex/Dockerfile
+  s_3bffb53c17a525::t_003e1b41b243e6 1-13
+  s_3bffb53c17a525::t_852c746dbf3970 14-16
+.github/workflows/release.yml
+  s_3bffb53c17a525::t_dedb2d0f669578 48-61
+  h_30afaad5482ce1 46,82
+  s_3bffb53c17a525::t_51e1367dc08d3d 1-45,47,62-81,83-131
+fixtures/templates/index.yaml
+  s_3bffb53c17a525::t_98b35f1bcfc84c 1-15
+  s_3bffb53c17a525::t_30d43afb3ffc93 16-18
+images/steamcmd-fex/Dockerfile
+  s_3bffb53c17a525::t_003e1b41b243e6 3-12
+  s_3bffb53c17a525::t_ff71266517d4ff 1
+  s_3bffb53c17a525::t_1904e296800a28 2
+  s_3bffb53c17a525::t_490d0b7bf5dd97 13-15
+.gitattributes
+  h_30afaad5482ce1 1-4
+crates/gametainer-storage/Cargo.toml
+  s_3bffb53c17a525::t_ffe8b5b3b756d0 4-11
+  s_3bffb53c17a525::t_577930e01bc96a 1-3
+  s_3bffb53c17a525::t_636ebe285e7f05 12-14
+images/steamcmd-wine-fex/Dockerfile
+  s_3bffb53c17a525::t_508787cbde7615 1
+  s_3bffb53c17a525::t_1773f93a6f8224 3-13
+  s_3bffb53c17a525::t_e2fae92480f77d 2
+  s_3bffb53c17a525::t_4d6c371e8ed041 14-16
+crates/gamer/Cargo.toml
+  s_3bffb53c17a525::t_800749727ea24b 2-4
+  s_3bffb53c17a525::t_d4a549e0eec174 5,7-9
+  s_3bffb53c17a525::t_c84e9fe7a14907 10
+  s_3bffb53c17a525::t_82dc5941f73ac3 6
+  s_3bffb53c17a525::t_26e310f08a6e05 11-12
+  s_3bffb53c17a525::t_bbe08f0fd6f2ed 1
+  s_3bffb53c17a525::t_322d51b2814844 13-15
+README.md
+  s_3bffb53c17a525::t_30d68df337853d 8
+  s_3bffb53c17a525::t_1885c0b27222d3 57
+  s_3bffb53c17a525::t_6adbb6000612a7 59-60
+  s_3bffb53c17a525::t_7cc09df16e3e79 2-7,10,13-16,18-19,44-45,53-56,58
+  s_3bffb53c17a525::t_0bade31f57e00d 1
+  s_3bffb53c17a525::t_401891b4febd65 11-12,20-32
+  s_3bffb53c17a525::t_52adbf7f5ed28a 34-43
+  s_3bffb53c17a525::t_2fa69763cda135 46-49,51-52
+  s_3bffb53c17a525::t_68a43b3bf1cd92 33
+  s_3bffb53c17a525::t_d8429edf62c38d 17
+  s_3bffb53c17a525::t_5a62c2be2c99b2 9,50
+fixtures/templates/games/factorio/settings.spec.yaml
+  s_3bffb53c17a525::t_98b35f1bcfc84c 1-8
+  s_3bffb53c17a525::t_f71dde58fe37d1 9-18
+crates/gamer/src/main.rs
+  s_3bffb53c17a525::t_90b75b931a3e1a 1-18
+crates/gametainer/src/docker.rs
+  s_3bffb53c17a525::t_dc09c7c251c9c0 1-18
+fixtures/templates/games/factorio/settings.template.yaml
+  s_3bffb53c17a525::t_f45d55b794a2a9 1-18
+fixtures/templates/games/palworld/settings.spec.yaml
+  s_3bffb53c17a525::t_31942d8e798ebe 1-18
+fixtures/templates/games/palworld/settings.template.yaml
+  s_3bffb53c17a525::t_bddb3d8076a6bc 1-18
+fixtures/templates/games/valheim/settings.spec.yaml
+  s_3bffb53c17a525::t_5885add7c469e1 1-18
+fixtures/templates/games/valheim/settings.template.yaml
+  s_3bffb53c17a525::t_b2f77452cfa6d9 1-18
+fixtures/templates/games/vrising/settings.template.yaml
+  s_3bffb53c17a525::t_eb9219df1111c7 1-18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.4",
+  "base_commit_sha": "825ef96189b116aa5cc34912e1f85ee885a7ad80",
+  "prompts": {},
+  "humans": {
+    "h_30afaad5482ce1": {
+      "author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  },
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": null
+    }
+  }
+}
