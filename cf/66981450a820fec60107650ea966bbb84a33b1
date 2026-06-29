@@ -1,0 +1,29 @@
+docs/release-packaging.md
+  s_3bffb53c17a525::t_b1b481ebe8b58a 1-81
+README.md
+  s_3bffb53c17a525::t_6adbb6000612a7 59-60
+Justfile
+  s_3bffb53c17a525::t_5e79fae1d4f24e 37-44
+.gitignore
+  s_3bffb53c17a525::t_a1225f8a29e941 16
+scripts/package-release.sh
+  s_3bffb53c17a525::t_44ec0042701b13 1-45
+.github/workflows/release.yml
+  s_3bffb53c17a525::t_51e1367dc08d3d 1-117
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "cf66981450a820fec60107650ea966bbb84a33b1",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
