@@ -1,0 +1,27 @@
+Cargo.toml
+  s_3bffb53c17a525::t_dd70acc5369abd 27-28
+Cargo.lock
+  s_3bffb53c17a525::t_ca4d9544d7adb6 5-13,80-85,171-172,265-270,282-296,303-317,324-329,354-370,456-464,494-502,542-615,634-639
+crates/gamer/Cargo.toml
+  s_3bffb53c17a525::t_26dfe75b07a9b6 2,7,11,14-15
+crates/gamer/src/main.rs
+  s_3bffb53c17a525::t_d7379e14e079cd 2,7,11,14-15
+crates/gamer/tests/offline.rs
+  s_3bffb53c17a525::t_6c535cd5db02ba 2,7,11,14-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.4",
+  "base_commit_sha": "2053d5192cdb39590e7c31b3c54bcbd0afce6500",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
