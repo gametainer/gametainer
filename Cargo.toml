@@ -15,6 +15,7 @@ repository = "https://github.com/gametainer/gametainer"
 version = "0.1.0"
 
 [workspace.dependencies]
+clap = { version = "4.5", features = ["derive"] }
 gametainer-core = { path = "crates/gametainer-core" }
 gametainer-storage = { path = "crates/gametainer-storage" }
 gametainer-templates = { path = "crates/gametainer-templates" }
