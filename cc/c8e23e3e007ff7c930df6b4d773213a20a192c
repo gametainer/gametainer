@@ -1,0 +1,48 @@
+README.md
+  s_3bffb53c17a525::t_401891b4febd65 11-12,20-32
+crates/gametainer-storage/src/repository.rs
+  s_3bffb53c17a525::t_ed99d40168de5f 3,22-26,29
+docs/cli-conventions.md
+  s_3bffb53c17a525::t_6e1b5efc669bc4 89,91,93,96-104,107-122
+  s_3bffb53c17a525::t_e998b98557665a 123
+crates/gametainer-storage/src/models.rs
+  s_3bffb53c17a525::t_ed99d40168de5f 47,57
+crates/gametainer-storage/src/sqlite.rs
+  s_3bffb53c17a525::t_ed99d40168de5f 2,6,70,286-287,291,311,321,332,336,342,352,357-358,361,364,367,389-390,482,486-487,493,495-497,499-500,503-504,506,510-511,514-515
+docs/template-catalog.md
+  s_3bffb53c17a525::t_dad18f5a3ca548 119-121,124-127,144-145,147-151,153,156
+  s_3bffb53c17a525::t_4a912bfcc4a69d 642
+crates/gametainer/src/main.rs
+  s_3bffb53c17a525::t_ed99d40168de5f 11,15,77,85,87,95,264,284,291,308,322,329,356,854,887,1853,1855,1861,1873
+  s_3bffb53c17a525::t_95d6f645ec6db5 250-253,259,263,266,270,274,277,279-281,288,290,298-299,305,307,311,313,319,326,332,335-336,340,342-355,357-381
+  s_3bffb53c17a525::t_c574b2e81a0f15 204-218,331
+  s_3bffb53c17a525::t_f57d6d72d5fb76 24,26,33-35,106,112-119,127-147,150-200
+  s_3bffb53c17a525::t_5b78623d2d7987 1792-1852,1854,1856-1860,1862-1863,1866-1872,1874-1884,1887,1889,1891-1895,1898,1900-1914,1919-1935,1937,1946,1951,1955
+  s_3bffb53c17a525::t_1ac308671ec89c 81
+  s_3bffb53c17a525::t_a7dfde04e96914 855-856,862,864,867,869,876,879-882,888-893
+  s_3bffb53c17a525::t_fac31607c4d57e 2194,2196,2198-2202
+  s_3bffb53c17a525::t_9627c243c087ff 1885-1886,1888,1890,1896-1897,1899,1915-1918
+  s_3bffb53c17a525::t_35c424459b66b0 2319-2411
+  s_3bffb53c17a525::t_2caec22a4f403b 30-31,98-99,1864-1865
+  s_3bffb53c17a525::t_6fb55a127a6c6c 382,2093-2096
+  s_3bffb53c17a525::t_8f00886a92d933 107-111,341
+  s_3bffb53c17a525::t_eeb5319b4f1f89 383
+docs/llm-brief.md
+  s_3bffb53c17a525::t_c8b955834d3132 244,247-256
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.3",
+  "base_commit_sha": "ccc8e23e3e007ff7c930df6b4d773213a20a192c",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
