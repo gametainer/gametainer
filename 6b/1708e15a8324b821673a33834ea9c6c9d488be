@@ -1,0 +1,16 @@
+.sops.yaml
+  h_30afaad5482ce1 1-10
+.gitattributes
+  h_30afaad5482ce1 1-4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.4",
+  "base_commit_sha": "6b1708e15a8324b821673a33834ea9c6c9d488be",
+  "prompts": {},
+  "humans": {
+    "h_30afaad5482ce1": {
+      "author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
