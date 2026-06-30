@@ -3,6 +3,11 @@ set shell := ["bash", "-eu", "-o", "pipefail", "-c"]
 docker_platform := "linux/amd64"
 docker_platform_arm64 := "linux/arm64"
 fixture_catalog := "fixtures/templates"
+ghcr_tag := "main"
+dev_host := "nixos@10.0.0.215"
+dev_path := "/home/nixos/dev/gametainer"
+smoke_local_state := "/tmp/gametainer-smoke-local"
+smoke_remote_state := "/tmp/gametainer-smoke-remote"
 
 default:
     just --list
@@ -56,6 +61,12 @@ catalog-validate:
 
 catalog-validate-fixtures:
     cargo run -q -p gametainer -- catalog validate --templates {{fixture_catalog}}
+
+catalog-image game runtime="native" tag="local":
+    GAMETAINER_IMAGE_TAG={{tag}} cargo run -q -p gametainer -- catalog image {{game}} --runtime {{runtime}} --templates {{fixture_catalog}}
+
+catalog-image-plain game runtime="native" tag="local":
+    GAMETAINER_IMAGE_TAG={{tag}} cargo run -q -p gametainer -- catalog image {{game}} --runtime {{runtime}} --templates {{fixture_catalog}} --plain
 
 init:
     cargo run -q -p gametainer -- init
@@ -154,3 +165,44 @@ sync-dev host="nixos@10.0.0.215" path="/home/nixos/dev/gametainer":
 sync-dev-build host="nixos@10.0.0.215" path="/home/nixos/dev/gametainer":
     just sync-dev {{host}} {{path}}
     ssh {{host}} 'cd {{path}} && just build-images'
+
+remote-servers host=dev_host path=dev_path state=smoke_remote_state:
+    ssh {{host}} 'cd {{path}} && GAMETAINER_STATE_DIR={{state}} cargo run -q -p gametainer -- servers list'
+
+remote-server-status name host=dev_host path=dev_path state=smoke_remote_state:
+    ssh {{host}} 'cd {{path}} && GAMETAINER_STATE_DIR={{state}} cargo run -q -p gametainer -- servers status {{name}}'
+
+remote-server-logs name host=dev_host path=dev_path state=smoke_remote_state tail="100":
+    ssh {{host}} 'cd {{path}} && GAMETAINER_STATE_DIR={{state}} cargo run -q -p gametainer -- servers logs {{name}} --tail {{tail}}'
+
+remote-server-destroy name host=dev_host path=dev_path state=smoke_remote_state:
+    ssh {{host}} 'cd {{path}} && GAMETAINER_STATE_DIR={{state}} cargo run -q -p gametainer -- servers destroy {{name}} --delete-data'
+
+remote-catalog-image game runtime="native" tag=ghcr_tag host=dev_host path=dev_path:
+    ssh {{host}} 'cd {{path}} && GAMETAINER_IMAGE_TAG={{tag}} cargo run -q -p gametainer -- catalog image {{game}} --runtime {{runtime}} --templates {{fixture_catalog}}'
+
+smoke-clean-local name="ghcr-palworld-fex" state="/tmp/gametainer-smoke-local-palworld-fex":
+    GAMETAINER_STATE_DIR={{state}} cargo run -q -p gametainer -- servers destroy {{name}} --delete-data
+
+smoke-clean-remote name="ghcr-palworld-native" host=dev_host path=dev_path state="/tmp/gametainer-smoke-remote-palworld-native":
+    just remote-server-destroy {{name}} {{host}} {{path}} {{state}}
+
+smoke-ghcr-local game="palworld" runtime="fex" name="ghcr-palworld-fex" tag=ghcr_tag state=smoke_local_state:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    image="$(GAMETAINER_IMAGE_TAG="{{tag}}" cargo run -q -p gametainer -- catalog image "{{game}}" --runtime "{{runtime}}" --templates "{{fixture_catalog}}" --plain)"
+    docker pull "$image"
+    GAMETAINER_STATE_DIR="{{state}}" cargo run -q -p gametainer -- servers destroy "{{name}}" --delete-data >/dev/null 2>&1 || true
+    GAMETAINER_STATE_DIR="{{state}}" GAMETAINER_IMAGE_TAG="{{tag}}" cargo run -q -p gametainer -- servers create "{{game}}" "{{name}}" --templates "{{fixture_catalog}}" --runtime "{{runtime}}"
+    GAMETAINER_STATE_DIR="{{state}}" cargo run -q -p gametainer -- servers start "{{name}}"
+    GAMETAINER_STATE_DIR="{{state}}" cargo run -q -p gametainer -- servers wait-ready "{{name}}"
+    GAMETAINER_STATE_DIR="{{state}}" cargo run -q -p gametainer -- servers status "{{name}}"
+
+smoke-ghcr-remote game="palworld" runtime="native" name="ghcr-palworld-native" tag=ghcr_tag host=dev_host path=dev_path state=smoke_remote_state:
+    ssh {{host}} 'cd {{path}} && image="$(GAMETAINER_IMAGE_TAG={{tag}} cargo run -q -p gametainer -- catalog image {{game}} --runtime {{runtime}} --templates {{fixture_catalog}} --plain)" && docker pull "$image" && (GAMETAINER_STATE_DIR={{state}} cargo run -q -p gametainer -- servers destroy {{name}} --delete-data >/dev/null 2>&1 || true) && GAMETAINER_STATE_DIR={{state}} GAMETAINER_IMAGE_TAG={{tag}} cargo run -q -p gametainer -- servers create {{game}} {{name}} --templates {{fixture_catalog}} --runtime {{runtime}} && GAMETAINER_STATE_DIR={{state}} cargo run -q -p gametainer -- servers start {{name}} && GAMETAINER_STATE_DIR={{state}} cargo run -q -p gametainer -- servers wait-ready {{name}} && GAMETAINER_STATE_DIR={{state}} cargo run -q -p gametainer -- servers status {{name}}'
+
+smoke-ghcr-palworld-local tag=ghcr_tag:
+    just smoke-ghcr-local palworld fex ghcr-palworld-fex {{tag}} {{smoke_local_state}}-palworld-fex
+
+smoke-ghcr-palworld-remote tag=ghcr_tag host=dev_host path=dev_path:
+    just smoke-ghcr-remote palworld native ghcr-palworld-native {{tag}} {{host}} {{path}} {{smoke_remote_state}}-palworld-native
