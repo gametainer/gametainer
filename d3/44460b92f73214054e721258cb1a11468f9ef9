@@ -1,0 +1,27 @@
+crates/gamer/src/main.rs
+  s_3bffb53c17a525::t_e7dd14a7fcf4bb 2,7,11,14-15
+crates/gamer/src/validation.rs
+  s_3bffb53c17a525::t_b0c89221b2d883 2,7,11,14-15
+crates/gametainer-core/src/gamer.rs
+  s_3bffb53c17a525::t_f11903d53469d6 2,7,11,14-15
+crates/gametainer/src/docker.rs
+  s_3bffb53c17a525::t_9728c9c29e8faa 2,7,11,14-15
+crates/gametainer/src/main.rs
+  s_3bffb53c17a525::t_ca21ab55014107 2,7,11,14-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.4",
+  "base_commit_sha": "d344460b92f73214054e721258cb1a11468f9ef9",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "unknown"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
