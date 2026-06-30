@@ -1,0 +1,33 @@
+fixtures/templates/games/valheim/definition.yaml
+  s_3bffb53c17a525::t_98b35f1bcfc84c 2
+  s_3bffb53c17a525::t_e6e4804befd424 7,11,14-15
+fixtures/templates/games/vrising/definition.yaml
+  s_3bffb53c17a525::t_eda268c530e048 2
+  s_3bffb53c17a525::t_aced3ccd8c5414 7,11,14-15
+crates/gamer/src/main.rs
+  s_3bffb53c17a525::t_5fa23a3a9441c8 2,7,11,14-15
+crates/gametainer-templates/src/lib.rs
+  s_3bffb53c17a525::t_f5a8245c36ef3f 2,7,11,14-15
+crates/gametainer/src/docker.rs
+  s_3bffb53c17a525::t_b9ad75ebfef35b 2,7,11,14-15
+crates/gametainer/src/main.rs
+  s_3bffb53c17a525::t_ec41c173783d72 2,7,11,14-15
+docs/template-catalog.md
+  s_3bffb53c17a525::t_95f63d45160f88 2,7,11,14-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.4",
+  "base_commit_sha": "18c66354ba932f112b9283db89ad8bdb25af9319",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
