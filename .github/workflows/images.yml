@@ -1,0 +1,348 @@
+name: images
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Image version tag, for example v0.1.0-dev.1"
+        required: false
+        default: ""
+      push_latest:
+        description: "Also push the latest tag"
+        required: false
+        default: false
+        type: boolean
+  push:
+    branches:
+      - main
+    tags:
+      - "gamer-v*"
+      - "gamer-dev-*"
+    paths:
+      - "Cargo.toml"
+      - "Cargo.lock"
+      - "crates/gamer/**"
+      - "crates/gametainer-core/**"
+      - "images/**"
+      - "scripts/git-sops.sh"
+      - ".github/workflows/images.yml"
+
+permissions:
+  contents: read
+  packages: write
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAMESPACE: gametainer
+
+jobs:
+  native:
+    name: build native images
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Install SOPS
+        uses: mdgreenwald/mozilla-sops-action@v2.1.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Decrypt repository
+        shell: bash
+        env:
+          SOPS_AGE_KEY: ${{ secrets.SOPS_AGE_KEY }}
+        run: |
+          set -euo pipefail
+          ./scripts/git-sops.sh -b init
+          ./scripts/git-sops.sh -b decrypt
+
+      - name: Resolve image metadata
+        id: meta
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ "${GITHUB_REF_TYPE}" == "tag" && "${GITHUB_REF_NAME}" == gamer-v* ]]; then
+            version="${GITHUB_REF_NAME#gamer-}"
+          elif [[ "${GITHUB_REF_TYPE}" == "tag" && "${GITHUB_REF_NAME}" == gamer-dev-* ]]; then
+            version="${GITHUB_REF_NAME#gamer-}"
+          elif [[ -n "${{ github.event.inputs.version }}" ]]; then
+            version="${{ github.event.inputs.version }}"
+          else
+            version="dev-${GITHUB_SHA::7}"
+          fi
+          if [[ ! "${version}" =~ ^[A-Za-z0-9_][A-Za-z0-9_.-]{0,127}$ ]]; then
+            echo "Invalid Docker tag: ${version}" >&2
+            exit 1
+          fi
+
+          tags="${version}"$'\n'"sha-${GITHUB_SHA::7}"
+          if [[ "${GITHUB_REF_NAME}" == "main" ]]; then
+            tags="${tags}"$'\n'"main"
+          fi
+          if [[ "${GITHUB_REF_TYPE}" == "tag" && "${GITHUB_REF_NAME}" == gamer-v* && ! "${GITHUB_REF_NAME}" =~ (dev|alpha|beta|rc) ]]; then
+            tags="${tags}"$'\n'"latest"
+          elif [[ "${{ github.event.inputs.push_latest }}" == "true" ]]; then
+            tags="${tags}"$'\n'"latest"
+          fi
+
+          {
+            echo "version=${version}"
+            echo "primary_tag=${version}"
+            echo "tags<<EOF"
+            echo "${tags}"
+            echo "EOF"
+          } >> "${GITHUB_OUTPUT}"
+
+      - name: Resolve image tags
+        id: image_tags
+        shell: bash
+        env:
+          IMAGE_TAGS: ${{ steps.meta.outputs.tags }}
+        run: |
+          set -euo pipefail
+
+          emit_tags() {
+            local output="$1"
+            local image="$2"
+
+            echo "${output}<<EOF" >> "${GITHUB_OUTPUT}"
+            while IFS= read -r tag; do
+              [[ -z "${tag}" ]] && continue
+              echo "${REGISTRY}/${IMAGE_NAMESPACE}/${image}:${tag}"
+            done <<< "${IMAGE_TAGS}" >> "${GITHUB_OUTPUT}"
+            echo "EOF" >> "${GITHUB_OUTPUT}"
+          }
+
+          emit_tags base base
+          emit_tags steamcmd steamcmd
+          emit_tags wine wine
+          emit_tags steamcmd_wine steamcmd-wine
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v4
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v4
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push base
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: images/base/Dockerfile
+          platforms: linux/amd64
+          push: true
+          build-args: |
+            GAMER_VERSION=${{ steps.meta.outputs.version }}
+          tags: ${{ steps.image_tags.outputs.base }}
+
+      - name: Build and push steamcmd
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: images/steamcmd/Dockerfile
+          platforms: linux/amd64
+          push: true
+          build-args: |
+            BASE_IMAGE=${{ env.REGISTRY }}/${{ env.IMAGE_NAMESPACE }}/base:${{ steps.meta.outputs.primary_tag }}
+            GAMER_VERSION=${{ steps.meta.outputs.version }}
+          tags: ${{ steps.image_tags.outputs.steamcmd }}
+
+      - name: Build and push wine
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: images/wine/Dockerfile
+          platforms: linux/amd64
+          push: true
+          build-args: |
+            BASE_IMAGE=${{ env.REGISTRY }}/${{ env.IMAGE_NAMESPACE }}/base:${{ steps.meta.outputs.primary_tag }}
+            GAMER_VERSION=${{ steps.meta.outputs.version }}
+          tags: ${{ steps.image_tags.outputs.wine }}
+
+      - name: Build and push steamcmd-wine
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: images/steamcmd-wine/Dockerfile
+          platforms: linux/amd64
+          push: true
+          build-args: |
+            WINE_IMAGE=${{ env.REGISTRY }}/${{ env.IMAGE_NAMESPACE }}/wine:${{ steps.meta.outputs.primary_tag }}
+            GAMER_VERSION=${{ steps.meta.outputs.version }}
+          tags: ${{ steps.image_tags.outputs.steamcmd_wine }}
+
+      - name: Publish summary
+        shell: bash
+        run: |
+          set -euo pipefail
+          {
+            echo "## Published native image tags"
+            echo
+            while IFS= read -r tag; do
+              echo "- \`${tag}\`"
+            done <<< "${{ steps.meta.outputs.tags }}"
+          } >> "${GITHUB_STEP_SUMMARY}"
+
+  fex:
+    name: build FEX images
+    runs-on: ubuntu-24.04-arm
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Install SOPS
+        uses: mdgreenwald/mozilla-sops-action@v2.1.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Decrypt repository
+        shell: bash
+        env:
+          SOPS_AGE_KEY: ${{ secrets.SOPS_AGE_KEY }}
+        run: |
+          set -euo pipefail
+          ./scripts/git-sops.sh -b init
+          ./scripts/git-sops.sh -b decrypt
+
+      - name: Resolve image metadata
+        id: meta
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ "${GITHUB_REF_TYPE}" == "tag" && "${GITHUB_REF_NAME}" == gamer-v* ]]; then
+            version="${GITHUB_REF_NAME#gamer-}"
+          elif [[ "${GITHUB_REF_TYPE}" == "tag" && "${GITHUB_REF_NAME}" == gamer-dev-* ]]; then
+            version="${GITHUB_REF_NAME#gamer-}"
+          elif [[ -n "${{ github.event.inputs.version }}" ]]; then
+            version="${{ github.event.inputs.version }}"
+          else
+            version="dev-${GITHUB_SHA::7}"
+          fi
+          if [[ ! "${version}" =~ ^[A-Za-z0-9_][A-Za-z0-9_.-]{0,127}$ ]]; then
+            echo "Invalid Docker tag: ${version}" >&2
+            exit 1
+          fi
+
+          tags="${version}"$'\n'"sha-${GITHUB_SHA::7}"
+          if [[ "${GITHUB_REF_NAME}" == "main" ]]; then
+            tags="${tags}"$'\n'"main"
+          fi
+          if [[ "${GITHUB_REF_TYPE}" == "tag" && "${GITHUB_REF_NAME}" == gamer-v* && ! "${GITHUB_REF_NAME}" =~ (dev|alpha|beta|rc) ]]; then
+            tags="${tags}"$'\n'"latest"
+          elif [[ "${{ github.event.inputs.push_latest }}" == "true" ]]; then
+            tags="${tags}"$'\n'"latest"
+          fi
+
+          {
+            echo "version=${version}"
+            echo "primary_tag=${version}"
+            echo "tags<<EOF"
+            echo "${tags}"
+            echo "EOF"
+          } >> "${GITHUB_OUTPUT}"
+
+      - name: Resolve image tags
+        id: image_tags
+        shell: bash
+        env:
+          IMAGE_TAGS: ${{ steps.meta.outputs.tags }}
+        run: |
+          set -euo pipefail
+
+          emit_tags() {
+            local output="$1"
+            local image="$2"
+
+            echo "${output}<<EOF" >> "${GITHUB_OUTPUT}"
+            while IFS= read -r tag; do
+              [[ -z "${tag}" ]] && continue
+              echo "${REGISTRY}/${IMAGE_NAMESPACE}/${image}:${tag}"
+            done <<< "${IMAGE_TAGS}" >> "${GITHUB_OUTPUT}"
+            echo "EOF" >> "${GITHUB_OUTPUT}"
+          }
+
+          emit_tags base_fex base-fex
+          emit_tags steamcmd_fex steamcmd-fex
+          emit_tags wine_fex wine-fex
+          emit_tags steamcmd_wine_fex steamcmd-wine-fex
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v4
+        with:
+          platforms: amd64
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v4
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v4
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push base-fex
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: images/base-fex/Dockerfile
+          platforms: linux/arm64
+          push: true
+          build-args: |
+            GAMER_VERSION=${{ steps.meta.outputs.version }}
+          tags: ${{ steps.image_tags.outputs.base_fex }}
+
+      - name: Build and push steamcmd-fex
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: images/steamcmd-fex/Dockerfile
+          platforms: linux/arm64
+          push: true
+          build-args: |
+            BASE_FEX_IMAGE=${{ env.REGISTRY }}/${{ env.IMAGE_NAMESPACE }}/base-fex:${{ steps.meta.outputs.primary_tag }}
+            GAMER_VERSION=${{ steps.meta.outputs.version }}
+          tags: ${{ steps.image_tags.outputs.steamcmd_fex }}
+
+      - name: Build and push wine-fex
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: images/wine-fex/Dockerfile
+          platforms: linux/arm64
+          push: true
+          build-args: |
+            BASE_FEX_IMAGE=${{ env.REGISTRY }}/${{ env.IMAGE_NAMESPACE }}/base-fex:${{ steps.meta.outputs.primary_tag }}
+            GAMER_VERSION=${{ steps.meta.outputs.version }}
+          tags: ${{ steps.image_tags.outputs.wine_fex }}
+
+      - name: Build and push steamcmd-wine-fex
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: images/steamcmd-wine-fex/Dockerfile
+          platforms: linux/arm64
+          push: true
+          build-args: |
+            WINE_FEX_IMAGE=${{ env.REGISTRY }}/${{ env.IMAGE_NAMESPACE }}/wine-fex:${{ steps.meta.outputs.primary_tag }}
+            GAMER_VERSION=${{ steps.meta.outputs.version }}
+          tags: ${{ steps.image_tags.outputs.steamcmd_wine_fex }}
+
+      - name: Publish summary
+        shell: bash
+        run: |
+          set -euo pipefail
+          {
+            echo "## Published FEX image tags"
+            echo
+            while IFS= read -r tag; do
+              echo "- \`${tag}\`"
+            done <<< "${{ steps.meta.outputs.tags }}"
+          } >> "${GITHUB_STEP_SUMMARY}"
