@@ -1,0 +1,33 @@
+crates/gametainer/tests/export.rs
+  s_3bffb53c17a525::t_262275f1d9f207 1-18
+crates/gametainer/src/main.rs
+  s_3bffb53c17a525::t_e206914a8783a7 2,7,11,14-15
+Cargo.lock
+  s_3bffb53c17a525::t_ba3c19d3a15e07 183
+crates/gametainer/Cargo.toml
+  s_3bffb53c17a525::t_a044bf00d3ab2d 2,7,11,14-15
+docs/cli-conventions.md
+  s_3bffb53c17a525::t_560a59f84aa794 2,7,11,14-15
+docs/llm-brief.md
+  s_3bffb53c17a525::t_0984798b57969d 2,7,11,14-15
+docs/mvp-implementation-plan.md
+  s_3bffb53c17a525::t_7ab60f5d25c669 2,7,11,14-15
+docs/product-architecture.md
+  s_3bffb53c17a525::t_1fc73f08b1e48e 2,7,11,14-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.5",
+  "base_commit_sha": "8f0e780edf28e027e503d41e52afaacde3775542",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
