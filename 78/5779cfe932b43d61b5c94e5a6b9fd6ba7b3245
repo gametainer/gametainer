@@ -1,0 +1,24 @@
+.github/workflows/images.yml
+  s_3bffb53c17a525::t_52984afd4232a0 75-78,85-86
+  s_3bffb53c17a525::t_46ba64ddb20726 1-18,29-65,70-74,79-83,87-97,127-186,188-197,199-209,211-221,223-233,235-246
+  s_3bffb53c17a525::t_a2f206c47a62e4 98-126,187,198,210,222,234
+  s_3bffb53c17a525::t_44088e41313c21 19-28,66-69,84
+.dockerignore
+  s_3bffb53c17a525::t_f85be906037708 1-9,11-12,14,16-18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.4",
+  "base_commit_sha": "785779cfe932b43d61b5c94e5a6b9fd6ba7b3245",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
