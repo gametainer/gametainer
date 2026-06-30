@@ -1,0 +1,25 @@
+Justfile
+  s_3bffb53c17a525::t_1eb91cec6214e8 184,187
+  s_3bffb53c17a525::t_9b3ce577ee3b50 6-10,65-70,168-177,181-182,189-194,196-201,203-208
+  s_3bffb53c17a525::t_f1ab9d24991963 178-180,183,185-186,188,195,202
+crates/gametainer/src/main.rs
+  s_3bffb53c17a525::t_f847ceb1e95ce1 2,7,11,14-15
+docs/cli-conventions.md
+  s_3bffb53c17a525::t_6bd7b24fb7bb58 2,7,11,14-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.4",
+  "base_commit_sha": "e9b5e16f237984378a99098d46f23db5a364afde",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
