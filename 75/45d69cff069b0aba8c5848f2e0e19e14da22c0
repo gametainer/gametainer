@@ -1,0 +1,35 @@
+.dockerignore
+  s_3bffb53c17a525::t_f85be906037708 1-9,11-12,14,16-18
+.github/workflows/images.yml
+  s_3bffb53c17a525::t_44088e41313c21 19-28,66-69,84
+  s_3bffb53c17a525::t_46ba64ddb20726 1-18,29-38,42-65,70-74,79-83,87-97,122-177,290-299,301-311,313-323,325-335,337-342,344-348
+  s_3bffb53c17a525::t_52984afd4232a0 75-78,85-86
+  s_3bffb53c17a525::t_a2f206c47a62e4 98-121,178,300,312,324,336
+  s_3bffb53c17a525::t_4705b2c056652c 276-280
+  s_3bffb53c17a525::t_ac17a238925552 39-40,179-193,195-275,281-289,343
+  s_3bffb53c17a525::t_e170f8844809cf 41,194
+images/steamcmd-fex/Dockerfile
+  s_3bffb53c17a525::t_ec685688e5a1f6 2,7,11,14-15
+images/steamcmd-wine-fex/Dockerfile
+  s_3bffb53c17a525::t_2c013539af7267 2,7,11,14-15
+images/steamcmd-wine/Dockerfile
+  s_3bffb53c17a525::t_db81137a7f882a 2,7,11,14-15
+images/steamcmd/Dockerfile
+  s_3bffb53c17a525::t_6b08ba4497b7f5 2,7,11,14-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.4",
+  "base_commit_sha": "7545d69cff069b0aba8c5848f2e0e19e14da22c0",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": null
+    }
+  }
+}
