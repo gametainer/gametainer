@@ -1,0 +1,39 @@
+crates/gametainer-templates/src/lib.rs
+  s_3bffb53c17a525::t_04be8ba0f45429 2,7,11,14-15
+crates/gametainer/src/main.rs
+  s_3bffb53c17a525::t_713ecaeaf7bd42 2,7,11,14-15
+crates/gametainer/src/docker.rs
+  s_3bffb53c17a525::t_62bb7597b1e0cc 2,7,11,14-15
+docs/llm-brief.md
+  s_3bffb53c17a525::t_f1e1c57f4565cf 2,7,11,14-15
+docs/mvp-implementation-plan.md
+  s_3bffb53c17a525::t_398f339d720230 2,7,11,14-15
+docs/product-architecture.md
+  s_3bffb53c17a525::t_362cda44b9b583 2,7,11,14-15
+docs/template-catalog.md
+  s_3bffb53c17a525::t_e39bf95ea8a3c7 2,7,11,14-15
+fixtures/templates/games/factorio/definition.yaml
+  s_3bffb53c17a525::t_842739e67a0620 2,7,11,14-15
+fixtures/templates/games/palworld/definition.yaml
+  s_3bffb53c17a525::t_f70cd089623cef 2,7,11,14-15
+fixtures/templates/games/valheim/definition.yaml
+  s_3bffb53c17a525::t_e69ea514798ae3 2,7,11,14-15
+fixtures/templates/games/vrising/definition.yaml
+  s_3bffb53c17a525::t_cccb3cb7cb2009 2,7,11,14-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.5",
+  "base_commit_sha": "6a4259335c3afaf0791dfed9848c55a23a825d1e",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
