@@ -206,3 +206,36 @@ smoke-ghcr-palworld-local tag=ghcr_tag:
 
 smoke-ghcr-palworld-remote tag=ghcr_tag host=dev_host path=dev_path:
     just smoke-ghcr-remote palworld native ghcr-palworld-native {{tag}} {{host}} {{path}} {{smoke_remote_state}}-palworld-native
+
+smoke-portable-backup runtime image platform name tag=ghcr_tag:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    state="$(mktemp -d /tmp/gametainer-portable-backup-{{runtime}}.XXXXXX)"
+    artifact="$state/data.tar.gz"
+    cleanup() {
+      GAMETAINER_STATE_DIR="$state/state" GAMETAINER_IMAGE_TAG="{{tag}}" cargo run -q -p gametainer -- servers destroy "{{name}}" --delete-data >/dev/null 2>&1 || true
+      rm -rf "$state"
+    }
+    trap cleanup EXIT
+    docker pull --platform "{{platform}}" "{{image}}:{{tag}}"
+    GAMETAINER_STATE_DIR="$state/state" GAMETAINER_IMAGE_TAG="{{tag}}" cargo run -q -p gametainer -- servers create factorio "{{name}}" --templates "{{fixture_catalog}}" --runtime "{{runtime}}" --debug
+    GAMETAINER_STATE_DIR="$state/state" GAMETAINER_IMAGE_TAG="{{tag}}" cargo run -q -p gametainer -- servers start "{{name}}"
+    docker exec "gametainer-inst_$(printf '%s' "{{name}}" | tr -c '[:alnum:]' '_' | tr '[:upper:]' '[:lower:]')" sh -lc 'mkdir -p /data/smoke && printf portable-smoke > /data/smoke/probe.txt'
+    GAMETAINER_STATE_DIR="$state/state" GAMETAINER_IMAGE_TAG="{{tag}}" cargo run -q -p gametainer -- servers stop "{{name}}"
+    GAMETAINER_STATE_DIR="$state/state" GAMETAINER_IMAGE_TAG="{{tag}}" cargo run -q -p gametainer -- servers backup "{{name}}" --output "$artifact"
+    GAMETAINER_STATE_DIR="$state/state" cargo run -q -p gametainer -- servers backup-info "$artifact"
+    GAMETAINER_STATE_DIR="$state/state" GAMETAINER_IMAGE_TAG="{{tag}}" cargo run -q -p gametainer -- servers restore "{{name}}" --input "$artifact" --dry-run
+    GAMETAINER_STATE_DIR="$state/state" GAMETAINER_IMAGE_TAG="{{tag}}" cargo run -q -p gametainer -- servers start "{{name}}"
+    docker exec "gametainer-inst_$(printf '%s' "{{name}}" | tr -c '[:alnum:]' '_' | tr '[:upper:]' '[:lower:]')" sh -lc 'printf mutated > /data/smoke/probe.txt'
+    GAMETAINER_STATE_DIR="$state/state" GAMETAINER_IMAGE_TAG="{{tag}}" cargo run -q -p gametainer -- servers stop "{{name}}"
+    GAMETAINER_STATE_DIR="$state/state" GAMETAINER_IMAGE_TAG="{{tag}}" cargo run -q -p gametainer -- servers restore "{{name}}" --input "$artifact" --force
+    GAMETAINER_STATE_DIR="$state/state" GAMETAINER_IMAGE_TAG="{{tag}}" cargo run -q -p gametainer -- servers start "{{name}}"
+    restored="$(docker exec "gametainer-inst_$(printf '%s' "{{name}}" | tr -c '[:alnum:]' '_' | tr '[:upper:]' '[:lower:]')" sh -lc 'cat /data/smoke/probe.txt')"
+    test "$restored" = portable-smoke
+    printf 'portable backup smoke passed: runtime=%s artifact=%s\n' "{{runtime}}" "$artifact"
+
+smoke-portable-backup-fex tag=ghcr_tag:
+    just smoke-portable-backup fex ghcr.io/gametainer/base-fex {{docker_platform_arm64}} smoke-portable-fex {{tag}}
+
+smoke-portable-backup-native tag=ghcr_tag:
+    just smoke-portable-backup native ghcr.io/gametainer/base {{docker_platform}} smoke-portable-native {{tag}}
