@@ -1,0 +1,19 @@
+docs/template-catalog.md
+  s_1d9edec47b7af1::t_f089feac43559a 2,7,11,14-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.5",
+  "base_commit_sha": "4320506b40d56243035a3abc0e3cdfe8f2f97a98",
+  "prompts": {},
+  "sessions": {
+    "s_1d9edec47b7af1": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f1958-91d6-73b2-b32c-8c985025d2e7",
+        "model": "unknown"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
