@@ -1,0 +1,21 @@
+{
+  "schema_version": "v1",
+  "channels": {
+    "stable": {
+      "gametainer": null,
+      "gamer_images": null,
+      "catalog": null
+    },
+    "dev": {
+      "gametainer": "v0.1.0-dev.1",
+      "gamer_images": "main",
+      "catalog": "main"
+    }
+  },
+  "sources": {
+    "gametainer_releases": "https://github.com/gametainer/gametainer/releases",
+    "gamer_images": "https://github.com/gametainer/gametainer/pkgs/container/base",
+    "catalog_repository": "https://github.com/gametainer/catalog",
+    "metadata": "https://raw.githubusercontent.com/gametainer/gametainer/main/versions.json"
+  }
+}

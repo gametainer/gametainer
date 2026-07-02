@@ -58,3 +58,5 @@ cargo run -q -p gametainer -- servers destroy my-factorio --skip-container
 ```
 
 Release packaging is documented in [docs/release-packaging.md](docs/release-packaging.md).
+Global update-channel metadata lives in [versions.json](versions.json) and is
+intended to be read from GitHub while the project uses static metadata files.
