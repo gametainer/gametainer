@@ -29,6 +29,8 @@ Catalog sources can be synced into the local state directory:
 gametainer catalog sources list
 gametainer catalog sync official
 gametainer catalog path
+gametainer catalog metadata
+gametainer update check
 ```
 
 Runtime state is stored in the OS app data directory by default:
