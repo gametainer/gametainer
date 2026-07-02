@@ -1,0 +1,23 @@
+crates/gametainer/src/main.rs
+  s_3bffb53c17a525::t_b182e5799fab52 2,7,11,14-15
+docs/cli-conventions.md
+  s_3bffb53c17a525::t_d93f85f340de21 2,7,11,14-15
+docs/template-catalog.md
+  s_3bffb53c17a525::t_47092c8a7bd9f9 2,7,11,14-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.8",
+  "base_commit_sha": "2783c0ff3eac477915dcc1a903fcb10ceb552bd2",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "unknown"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
