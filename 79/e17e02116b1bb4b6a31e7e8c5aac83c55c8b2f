@@ -1,0 +1,27 @@
+crates/gametainer/src/main.rs
+  s_3bffb53c17a525::t_b9c6f34166f87a 2,7,11,14-15
+docs/cli-conventions.md
+  s_3bffb53c17a525::t_c1d411b1e49a30 2,7,11,14-15
+docs/llm-brief.md
+  s_3bffb53c17a525::t_1172d5b10c4f80 2,7,11,14-15
+docs/mvp-implementation-plan.md
+  s_3bffb53c17a525::t_497eeb3b7ccde6 2,7,11,14-15
+docs/product-architecture.md
+  s_3bffb53c17a525::t_e8bf83ccaa2806 2,7,11,14-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.8",
+  "base_commit_sha": "79e17e02116b1bb4b6a31e7e8c5aac83c55c8b2f",
+  "prompts": {},
+  "sessions": {
+    "s_3bffb53c17a525": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019ef6c7-8529-7ff3-baef-867f6d1e58ee",
+        "model": "gpt-5.5"
+      },
+      "human_author": "JinxCappa <git@jinxcappa.dev>"
+    }
+  }
+}
